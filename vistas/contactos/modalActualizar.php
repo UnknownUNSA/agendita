@@ -1,36 +1,34 @@
 
+
 <!-- Modal -->
-<div class="modal fade" id="modalActualizarContactos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modalActualizarContacto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Actualizar un contacto</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Actualizar contacto</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-	      <form id="frmActualizarContactos">
-		<div id="categoriasIdU"></div>
-		<label for="nombreContactosU">Nombre</label>
-		<input type="text" id="nombreContactosU" name="nombreContactosU" class="form-control">
-
-		<label for="aPaternoContactosU">Apellido paterno</label>
-		<input type="text" id="aPaternoContactosU" name="aPaternoContactosU" class="form-control">
-
-		<label for="aMaternoContactosU">Apellido materno</label>
-		<input type="text" id="aMaternoContactosU" name="aMaternoContactosU" class="form-control">
-
-		<label for="telefonoContactosU">Teléfono</label>
-		<input type="text" id="telefonoContactosU" name="telefonoContactosU" class="form-control">
-
-		<label for="emailContactosU">Email</label>
-		<input type="text" id="emailContactosU" name="emailContactosU" class="form-control">
-	      </form>
+        <form id="frmAgregarContactoU">
+          <div id="categoriasIdU"></div>
+          <input type="text" id="idContactoU" name="idContactoU" hidden="">
+          <label for="nombreU">Nombre</label>
+          <input type="text" class="form-control" id="nombreU" name="nombreU">
+          <label for="apaternoU">Apellido parterno</label>
+          <input type="text" class="form-control" id="apaternoU" name="apaternoU">
+          <label for="amaternoU">Apellido materno</label>
+          <input type="text" class="form-control" id="amaternoU" name="amaternoU">
+          <label for="telefonoU">Telefono</label>
+          <input type="text" class="form-control" id="telefonoU" name="telefonoU">
+          <label for="emailU">Email</label>
+          <input type="text" class="form-control" id="emailU" name="emailU">
+        </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-warnig">Actualizar</button>
+        <button type="button" class="btn btn-warning" id="btnActualizarContacto">Actualizar</button>
       </div>
     </div>
   </div>

@@ -1,13 +1,17 @@
 <?php 
-	class Conexion{
-		public funcition conectar(){
-			$servidor="localhost";
-			$usuario="root";
-			$password="";
-			$bd="agendafa";
+	
+	class Conexion {
 
-			$conexion = mwsqli_connect($servidor, $usuario, $password, $bd);
+		public function conectar() {
+			$servidor = "localhost";
+			$usuario = "root";
+			$password = "notch";
+			$bd = "agendafa";
+
+			$conexion = mysqli_connect($servidor, $usuario, $password, $bd);
+
 			return $conexion;
 		}
 	}
-?>
+
+ ?>
