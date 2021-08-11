@@ -12,7 +12,7 @@
 <div class="card">
 	<div class="card-body">
 		<div class="table-responsive">
-			<table class="table table-hover table-condensed" id="tablaCategoriasDT">
+			<table class="table table-hover table-condensed table-bordered" id="tablaCategoriasDT">
 				<thead>
 					<tr>
 						<th>Nombre</th>

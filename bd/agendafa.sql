@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `t_categorias` (
-  `id_categoria` int(11) NOT NULL,
+  `id_contacto` int(11) NOT NULL,
   `nombre` varchar(255) DEFAULT NULL,
   `descripcion` text DEFAULT NULL,
   `fechaInsert` datetime NOT NULL DEFAULT current_timestamp()
@@ -42,7 +42,7 @@ CREATE TABLE `t_categorias` (
 --
 
 CREATE TABLE `t_contactos` (
-  `id_agenda` int(11) NOT NULL,
+  `id_contacto` int(11) NOT NULL,
   `id_categoria` int(11) NOT NULL,
   `nombre` varchar(245) DEFAULT NULL,
   `paterno` varchar(245) DEFAULT NULL,
@@ -66,7 +66,7 @@ ALTER TABLE `t_categorias`
 -- Indices de la tabla `t_contactos`
 --
 ALTER TABLE `t_contactos`
-  ADD PRIMARY KEY (`id_agenda`),
+  ADD PRIMARY KEY (`id_contacto`),
   ADD KEY `fkContactoCategoria_idx` (`id_categoria`);
 
 --
@@ -83,7 +83,7 @@ ALTER TABLE `t_categorias`
 -- AUTO_INCREMENT de la tabla `t_contactos`
 --
 ALTER TABLE `t_contactos`
-  MODIFY `id_agenda` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_contacto` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Restricciones para tablas volcadas

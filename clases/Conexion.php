@@ -5,7 +5,7 @@
 		public function conectar() {
 			$servidor = "localhost";
 			$usuario = "root";
-			$password = "notch";
+			$password = "";
 			$bd = "agendafa";
 
 			$conexion = mysqli_connect($servidor, $usuario, $password, $bd);
