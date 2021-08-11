@@ -11,7 +11,7 @@
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
                 <a class="nav-link" href="index.php">
-                    <span class="fas fa-house-user"></span> Inicio <span class="sr-only">(current)</span>
+                    <span class="fas fa-house-user"></span> Bienvenido <span class="sr-only">(current)</span>
                 </a>
             </li>
             <li class="nav-item active">
