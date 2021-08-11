@@ -48,7 +48,7 @@
                         <td><?php echo $mostrar['nombre'] ?></td>
                         <td><?php echo $mostrar['telefono'] ?></td>
                         <td><?php echo $mostrar['email'] ?></td>
-                        <td><img src="<?php echo substr($mostrar['ruta'], 31) ?>"></td>
+                        <td><img src="<?php echo substr($mostrar['ruta'], 24) ?>"></td>
 
                         <td><?php echo $mostrar['categoria'] ?></td>
                         <td>

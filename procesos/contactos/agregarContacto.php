@@ -16,7 +16,7 @@
 		$nombre_imagen =$_FILES['foto']['name'];
 		$temporal =$_FILES['foto']['tmp_name'];
 		$carpeta = '\imgsub';
-		$ruta = "C:\laragon\www\agendaContactos".$carpeta."\\".$nombre_imagen;
+		$ruta = "C:\laragon\www\agendita".$carpeta."\\".$nombre_imagen;
 		copy($temporal, $ruta);
 		
 	 } else{$ruta = "0 balas";}
