@@ -10,15 +10,17 @@
 											paterno,
 											materno,
 											telefono,
-											email)
-					VALUES (?, ?, ?, ?, ?, ?)";
+											email,
+											ruta)
+					VALUES (?, ?, ?, ?, ?, ?, ?)";
 			$query = $conexion->prepare($sql);
-			$query->bind_param('isssss', $datos['idCategoria'],
+			$query->bind_param('issssss', $datos['idCategoria'],
 										 $datos['nombre'],
 										 $datos['paterno'],
 										 $datos['materno'],
 										 $datos['telefono'],
-										 $datos['email']);
+										 $datos['email'],
+										 $datos['ruta']);
 			$respuesta = $query->execute();
 			return $respuesta;
 		}
