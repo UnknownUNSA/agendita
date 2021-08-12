@@ -22,6 +22,8 @@
                     <input type="text" class="form-control" id="telefono" name="telefono">
                     <label for="email">Email</label>
                     <input type="text" class="form-control" id="email" name="email">
+                    <label for="profesion">Profesion</label>
+                    <input type="text" class="form-control" id="profesion" name="profesion">
                     <label for="foto">Foto</label>
                     <input type="file" name="foto" id="foto">
 

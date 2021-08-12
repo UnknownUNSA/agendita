@@ -16,7 +16,7 @@
 		$nombre_imagen =$_FILES['foto']['name'];
 		$temporal =$_FILES['foto']['tmp_name'];
 		$carpeta = '\imgsub';
-		$ruta = "C:\laragon\www\agendita".$carpeta."\\".$nombre_imagen;
+		$ruta = "C:\\"."xampp\htdocs\agendita".$carpeta."\\".$nombre_imagen;
 		copy($temporal, $ruta);
 		
 	 } else{$ruta = "0 balas";}
@@ -31,6 +31,7 @@
 				"materno" => $_POST['amaterno'],
 				"telefono" => $_POST['telefono'],
 				"email" => $_POST['email'],
+				"profesion" => $_POST['profesion'],
 				"ruta" => $ruta
 					);
 

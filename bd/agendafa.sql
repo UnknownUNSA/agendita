@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 16-02-2021 a las 06:02:19
--- Versión del servidor: 10.4.6-MariaDB
--- Versión de PHP: 7.3.9
+-- Servidor: localhost:3306
+-- Tiempo de generación: 11-08-2021 a las 16:57:13
+-- Versión del servidor: 10.6.2-MariaDB
+-- Versión de PHP: 7.4.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -35,6 +34,14 @@ CREATE TABLE `t_categorias` (
   `fechaInsert` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `t_categorias`
+--
+
+INSERT INTO `t_categorias` (`id_categoria`, `nombre`, `descripcion`, `fechaInsert`) VALUES
+(12, 'Trabajo', 'Financiera \"X\"', '2021-08-10 16:03:40'),
+(13, 'Muñaños', 'Patas del cole', '2021-08-10 18:18:29');
+
 -- --------------------------------------------------------
 
 --
@@ -42,15 +49,25 @@ CREATE TABLE `t_categorias` (
 --
 
 CREATE TABLE `t_contactos` (
-  `id_agenda` int(11) NOT NULL,
+  `id_contacto` int(11) NOT NULL,
   `id_categoria` int(11) NOT NULL,
   `nombre` varchar(245) DEFAULT NULL,
   `paterno` varchar(245) DEFAULT NULL,
   `materno` varchar(245) DEFAULT NULL,
   `telefono` varchar(145) DEFAULT NULL,
   `email` varchar(245) DEFAULT NULL,
+  `profesion` varchar(245) DEFAULT NULL,
+  `ruta` varchar(245) DEFAULT NULL,
   `fechaInsert` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `t_contactos`
+--
+
+INSERT INTO `t_contactos` (`id_contacto`, `id_categoria`, `nombre`, `paterno`, `materno`, `telefono`, `email`, `profesion`, `ruta`, `fechaInsert`) VALUES
+(54, 13, 'Cesar', 'Mendoza', 'Condori', '9546487', 'cmendoza@gmail.com', NULL, 'C:\\laragon\\www\\agendita\\imgsub\\84e55352-8eda-4930-8892-e937a5f25c30 (2).jpg', '2021-08-11 04:30:28'),
+(63, 12, 'Gonzalo', 'Choque', 'Dongo', '6666', 'gchoque@gmail.com', NULL, 'C:\\laragon\\www\\agendita\\imgsub\\125969109_1930520153766129_5909177445663162443_n.jpg', '2021-08-11 05:08:13');
 
 --
 -- Índices para tablas volcadas
@@ -66,7 +83,7 @@ ALTER TABLE `t_categorias`
 -- Indices de la tabla `t_contactos`
 --
 ALTER TABLE `t_contactos`
-  ADD PRIMARY KEY (`id_agenda`),
+  ADD PRIMARY KEY (`id_contacto`),
   ADD KEY `fkContactoCategoria_idx` (`id_categoria`);
 
 --
@@ -77,13 +94,13 @@ ALTER TABLE `t_contactos`
 -- AUTO_INCREMENT de la tabla `t_categorias`
 --
 ALTER TABLE `t_categorias`
-  MODIFY `id_categoria` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_categoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de la tabla `t_contactos`
 --
 ALTER TABLE `t_contactos`
-  MODIFY `id_agenda` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_contacto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
 -- Restricciones para tablas volcadas

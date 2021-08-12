@@ -27,17 +27,17 @@
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <div class="card">
+                    <div class="card text-center">
                         <div class="card-body">
                             <table class="table table-hover">
                                 <tr>
-                                    <th>Datos de persona, falta1</th>
+                                    <th>Edgard Mendoza</th>
                                 </tr>
                                 <tr>
-                                    <th>Datos de persona, falta2</th>
+                                    <th>Trujillo, Perú</th>
                                 </tr>
                                 <tr>
-                                    <th>Datos de persona, falta3</th>
+                                    <th>Payaso Profesional</th>
                                 </tr>
                             </table>
                         </div>

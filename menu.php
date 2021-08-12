@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: 	#6495ED;">
     <a class="navbar-brand" href="index.php">
         <span class="fas fa-handshake fa-3x"></span>
     </a>

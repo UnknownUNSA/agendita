@@ -11,15 +11,17 @@
 											materno,
 											telefono,
 											email,
+											profesion,
 											ruta)
-					VALUES (?, ?, ?, ?, ?, ?, ?)";
+					VALUES (?, ?, ?, ?, ?, ?, ?,?)";
 			$query = $conexion->prepare($sql);
-			$query->bind_param('issssss', $datos['idCategoria'],
+			$query->bind_param('isssssss', $datos['idCategoria'],
 										 $datos['nombre'],
 										 $datos['paterno'],
 										 $datos['materno'],
 										 $datos['telefono'],
 										 $datos['email'],
+										 $datos['profesion'],
 										 $datos['ruta']);
 			$respuesta = $query->execute();
 			return $respuesta;

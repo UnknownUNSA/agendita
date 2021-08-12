@@ -9,6 +9,7 @@
 					    contactos.nombre AS nombre,
 					    contactos.telefono AS telefono,
 					    contactos.email AS email,
+                        contactos.profesion AS profesion,
                         contactos.ruta AS ruta,
 					    categorias.nombre AS categoria,
 					    contactos.id_contacto AS idContacto
@@ -31,7 +32,8 @@
                         <th>Nombre</th>
                         <th>Telefono</th>
                         <th>Email</th>
-                        <th>Ruta</th>
+                        <th>Profesion</th>
+                        <th>Foto</th>
                         <th>Categoria</th>
                         <th>Editar</th>
                         <th>Eliminar</th>
@@ -48,13 +50,15 @@
                         <td><?php echo $mostrar['nombre'] ?></td>
                         <td><?php echo $mostrar['telefono'] ?></td>
                         <td><?php echo $mostrar['email'] ?></td>
-                        <td><img src="<?php echo substr($mostrar['ruta'], 24) ?>"></td>
+                        <td><?php echo $mostrar['profesion'] ?></td>
+                        <td><img class="img-fluid" src="<?php echo substr($mostrar['ruta'], 25) ?>"></td>
 
                         <td><?php echo $mostrar['categoria'] ?></td>
                         <td>
                             <span class="btn btn-warning btn-sm"
                                 onclick="obtenerDatosContacto('<?php echo $idContacto ?>')" data-toggle="modal"
                                 data-target="#modalActualizarContacto">
+                                <!--dando accion al boton -->
                                 <span class="fas fa-edit"></span>
                             </span>
                         </td>
